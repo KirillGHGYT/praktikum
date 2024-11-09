@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pfleiderer Praktikum Timeline</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b1b9c5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin-top: 30px;
+            color: #3b3b3b;
+        }
+
+        .btn {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.2) rotate(15deg);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .tiktok {
+            background-color: #00101a;
+            color: #fdfdfd;
+        }
+        .tiktok:hover {
+            background-color: #042746;
+            color: #ffffff;
+        }
+
+        .youtube {
+            background-color: #ff0000;
+            color: #fdfdfd;
+        }
+        .youtube:hover {
+            background-color: #d10000;
+            color: #ffffff;
+        }
+
+        .link {
+            padding-top: 50px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.5) translateY(20px);
+            }
+            60% {
+                opacity: 1;
+                transform: scale(1.05) translateY(-5px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .link a {
+            animation: popIn 0.8s ease-out;
+            animation-delay: 0.2s;
+        }
+
+        .link a:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .link a:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .link a:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .timeline-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #acc2dd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            padding: 15px;
+            margin: 10px 0;
+            animation: fadeIn 1s ease;
+            position: relative;
+        }
+        .timeline-item:hover {
+            transform: scale(1.1);
+        }
+
+        .timeline-item.left {
+            align-self: flex-start;
+            margin-right: 50%;
+        }
+
+        .timeline-item.right {
+            align-self: flex-end;
+            margin-left: 50%;
+        }
+
+        .timeline-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #004d40;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            animation: popIn 0.8s ease-out;
+            animation-delay: 0.2s;
+        }
+
+        .timeline-title {
+            font-size: 1.3em;
+            color: #004d40;
+            margin-bottom: 5px;
+        }
+
+        .timeline-date {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .timeline-description {
+            font-size: 1em;
+            color: #555;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            .timeline-item {
+                width: 90%;
+                margin: 10px auto;
+            }
+            .timeline-line {
+                left: 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pfleiderer Praktikum Timeline</h1>
+
+    <div class="timeline-container">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item left">
+            <div class="timeline-icon">💻</div>
+            <div class="timeline-title">IT Abteilung</div>
+            <div class="timeline-date">Montag</div>
+            <div class="timeline-description">
+                Gelernt:was POE-Switches sind und die Grundfunktionen von SAP.
+            </div>
+        </div>
+
+        <div class="timeline-item right">
+            <div class="timeline-icon">📄</div>
+            <div class="timeline-title">Holzeinkauf Abteilung</div>
+            <div class="timeline-date">Dienstag</div>
+            <div class="timeline-description">
+                Gelernt: Erstellung und Bearbeitung von Lieferscheinen.
+            </div>
+        </div>
+
+        <div class="timeline-item left">
+            <div class="timeline-icon">📦</div>
+            <div class="timeline-title">Objekt Abteilung</div>
+            <div class="timeline-date">Mittwoch</div>
+            <div class="timeline-description">
+                Gelernt: Bearbeitung von Anfragen und Exportprozesse, z.B. Versand nach Italien.
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="timeline-icon">👨‍💻</div>
+            <div class="timeline-title">Kunden support</div>
+            <div class="timeline-date">Donerstag</div>
+            <div class="timeline-description">
+                Gelernt: welche dekore es gibt und was es für kunden und händler es gibt
+            </div>
+        </div>
+
+        <div class="timeline-item left">
+            <div class="timeline-icon">💻</div>
+            <div class="timeline-title">IT Abteilung</div>
+            <div class="timeline-date">Donnerstag mittag</div>
+            <div class="timeline-description">
+                Gelernt: Wie mann alte pcs im programm entfernt oder neu einrichtet
+            </div>
+        </div>
+
+        <div class="timeline-item right">
+            <div class="timeline-icon">💻</div>
+            <div class="timeline-title">IT Abteilung</div>
+            <div class="timeline-date">Feitag</div>
+            <div class="timeline-description">
+                Gelernt:wie man eine html seite erstellt und was css ist.
+            </div>
+        </div>
+    </div>
+
+    <div class="link">
+        <a href="https://x.com/kiri202132" class="btn tiktok" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.tiktok.com/@its_kirillghg" class="btn tiktok" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://www.youtube.com/@its_KirillGHG" class="btn youtube" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://github.com/KirillGHGYT" class="btn tiktok" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+
+</body>
+</html>
